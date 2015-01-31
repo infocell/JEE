@@ -1,0 +1,20 @@
+body {
+    background-color: #d0e4fe;
+    with:100%;
+
+
+
+}
+
+#login {
+	background-color: red;	
+	border-radius:25px;
+	width: 200px;
+	padding: 20px;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head></h:head>
+<body>
+
+	<h:outputText
+		value="Logged in successfully with username: #{loggedUser.username}" />
+	<br />
+	<br />
+	<h:form>
+		<h:commandButton value="Do logout" action="#{loginBean.logout}" />
+	</h:form>
+
+	<br />
+	<br />
+	<h:dataTable var="u" value="#{listUsersBean.users}">
+		<h:column>
+			<f:facet name="header">ID</f:facet>
+			<h:outputText value="#{u.id}" />
+		</h:column>
+
+		<h:column>
+			<f:facet name="header">USERNAME</f:facet>
+			<h:outputText value="#{u.username}" />
+		</h:column>
+
+		<h:column>
+			<f:facet name="header">PASSWORD</f:facet>
+			<h:outputText value="#{u.password}" />
+		</h:column>
+
+		<h:column>
+			<f:facet name="header">EMAIL</f:facet>
+			<h:outputText value="#{u.email}" />
+		</h:column>
+
+		<h:column>
+			<f:facet name="header">NAME</f:facet>
+			<h:outputText value="#{u.name}" />
+		</h:column>
+
+		<h:column>
+			<f:facet name="header">Age</f:facet>
+			<h:outputText value="#{u.age}" />
+		</h:column>
+
+		<h:column>
+			<f:facet name="header">PHONE</f:facet>
+			<h:outputText value="#{u.phone}" />
+		</h:column>
+
+		<h:column>
+			<f:facet name="header">ADDRESS</f:facet>
+			<h:outputText value="#{u.address}" />
+		</h:column>
+
+	</h:dataTable>
+
+</body>
+</html>

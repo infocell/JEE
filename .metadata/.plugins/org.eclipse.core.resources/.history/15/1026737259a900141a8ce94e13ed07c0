@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+</h:head>
+<body>
+	<h:outputStylesheet library="css" name="style.css" value="style.css" />
+	<h:outputText value="Login XHTML" />
+	<br />
+	<br />
+
+	<div style="color: red;">
+		<h:messages />
+	</div>
+
+
+	<div>
+
+		<h:form>
+
+Username: <h:inputText value="#{loginBean.username}" required="true"
+				label="Username" />
+			<br />
+			<br />
+Password: 
+<h:inputSecret value="#{loginBean.password}" required="true"
+				label="Password">
+				<f:validateLength minimum="3" />
+			</h:inputSecret>
+			<br />
+			<br />
+
+			<h:commandButton value="Do login" action="#{loginBean.login}" />
+
+		</h:form>
+
+
+	</div>
+
+	<br />
+	<br />
+
+	<a href="#{application.contextPath}/faces/createuser.xhtml">Create
+		User</a>
+
+	<br />
+	<br />
+
+</body>
+</html>

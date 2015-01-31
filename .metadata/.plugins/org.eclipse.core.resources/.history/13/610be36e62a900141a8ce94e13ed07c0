@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+<link type="text/css" rel="stylesheet" href="#{request.contextPath}/css/test.css?ln=css&amp;version=#{language.myTimeinMill}" />
+</h:head>
+<body>
+	<h:outputText value="Create User XHTML" />
+	<br />
+	<br />
+
+	<div style="color: red;">
+		<h:messages />
+	</div>
+
+
+	<div>
+
+		<h:form>
+
+Username: 
+<h:inputText value="#{createUserBean.username}" required="true"
+				label="Username">
+				<f:validateLength maximum="45" />
+			</h:inputText>
+			<br />
+			<br />
+
+Password: 
+<h:inputSecret value="#{createUserBean.password}" required="true"
+				label="Password">
+				<f:validateLength minimum="3" maximum="45" />
+			</h:inputSecret>
+			<br />
+			<br />
+
+Email: <h:inputText value="#{createUserBean.email}" label="Email" />
+			<br />
+			<br />
+
+Name: 
+<h:inputText value="#{createUserBean.name}" required="true" label="Name">
+				<f:validateLength maximum="100" />
+			</h:inputText>
+			<br />
+			<br />
+Age: 
+<h:inputText value="#{createUserBean.age}" required="false" label="Age">
+				<f:validateLongRange minimum="1" maximum="150"></f:validateLongRange>
+			</h:inputText>
+			<br />
+			<br />
+Phone: 
+<h:inputText value="#{createUserBean.phone}" required="false"
+				label="Phone">
+				<f:validateLength maximum="50" />
+			</h:inputText>
+			<br />
+			<br />
+Address: 
+<h:inputTextarea value="#{createUserBean.address}" required="false"
+				label="Address">
+				<f:validateLength maximum="200" />
+			</h:inputTextarea>
+			<br />
+			<br />
+
+			<h:commandButton value="Save user"
+				action="#{createUserBean.saveUser}" />
+
+		</h:form>
+
+
+	</div>
+
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+* {
+	background-color: green;
+	text-decoration: line-through;
+}
+
+div {
+	border: 3px;
+	border-color: yellow;
+}

@@ -1,0 +1,10 @@
+body {
+	background-color: green;
+	color: red;
+}
+div {
+	background-color: yellow;
+}
+* {
+	background-color: red;
+}

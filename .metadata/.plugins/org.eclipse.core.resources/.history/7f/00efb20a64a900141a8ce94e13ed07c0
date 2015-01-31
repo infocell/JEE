@@ -1,0 +1,14 @@
+body {
+    background-color: #d0e4fe;
+    with:100%;
+    text-align: center;
+
+
+}
+
+#login {
+	background-color: red;	
+	width: 200px;
+	padding: 20px;
+	text-align: center;
+}
